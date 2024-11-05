@@ -1,6 +1,6 @@
 import React from "react";
-import RickAndMortyCharacters from "./RickAndMortyCharacters"; // Import your new component
-import "./App.css"; // Keep your existing CSS import
+import RickAndMortyCharacters from "./components/RickAndMortyCharacters";
+import "./styles/App.css";
 
 function App() {
   return (
