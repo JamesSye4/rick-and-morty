@@ -40,3 +40,302 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Container for the entire character section */
+.character-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Space between the search bar and the clear button */
+  margin-bottom: 20px;
+  justify-content: center; /* Center the search bar and button */
+}
+
+/* Search bar styling */
+.search-bar {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  flex: 1; /* Allow the search bar to grow and take up available space */
+  max-width: 400px; /* Limit the maximum width */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Clear button styling */
+.clear-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Styling for the "No characters found" message and clear button */
+.no-characters {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Character list grid layout */
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Character card styling */
+.character-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+  width: 150px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* Image styling for consistent appearance */
+.character-card img {
+  width: 100px; /* Consistent image width */
+  height: 100px; /* Consistent image height */
+  object-fit: cover; /* Crop image to fit */
+  border-radius: 5px;
+}
+
+/* Character name styling */
+.character-card h3 {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0 0; /* Space above the name */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-height: 3em; /* Limit the height of the text block */
+}
+
+
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+/* Character detail view styling */
+.character-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  
+  /* New properties to add spacing from the top and bottom */
+  max-height: 90vh; /* Limit the height to 80% of the viewport height */
+  overflow-y: auto; /* Enable scrolling if the content exceeds the max height */
+  margin-top: 20px; /* Additional space from the top */
+  margin-bottom: 20px; /* Additional space from the bottom */
+  box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+
+.character-details img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.character-details button {
+  background-color: #ff5f5f;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.character-details button:hover {
+  background-color: #ff3333;
+}
+
+/* Back button styling */
+.back-button {
+  background-color: #ff5f5f;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background-color: #ff3333;
+}
+
+/* Styling for the episode list to make it scrollable */
+.episode-list {
+  max-height: 200px; /* Set a maximum height for the list */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding: 10px;     /* Add some padding for better appearance */
+  border: 1px solid #ddd; /* Optional: Add a border for visual separation */
+  border-radius: 5px; /* Optional: Round the corners */
+  background-color: #f9f9f9; /* Optional: Light background for contrast */
+}
+
+/* Fade-in animation for the character details */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.character-details {
+  /* Existing styles */
+  animation: fadeIn 0.3s ease-in-out; /* Apply the fade-in animation */
+}
+
+/* Character card styling */
+.character-card {
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for the hover effect */
+}
+
+/* Hover effect */
+.character-card:hover {
+  transform: scale(1.05); /* Slightly increase the size of the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
+/* Spinner styling */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+  margin: 20px auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the character details */
+.character-details {
+  /* Existing styles */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  
+  /* New animation styles */
+  animation: fadeIn 0.3s ease-in-out; /* Apply the fade-in animation */
+}
+
+/* Error message styling */
+.error-container {
+  text-align: center;
+  padding: 20px;
+  color: red;
+}
+
+/* Retry button styling */
+.retry-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.retry-button:hover {
+  background-color: #0056b3;
+}
+
+/* Load More button styling */
+.load-more-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3;
+}

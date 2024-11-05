@@ -1,20 +1,12 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import CharacterDetails from './pages/CharacterDetails/CharacterDetails';
-import NotFound from './pages/NotFound/NotFound';
-import Header from './components/Header/Header';
-import './App.css';
+import React from "react";
+import RickAndMortyCharacters from "./RickAndMortyCharacters"; // Import your new component
+import "./App.css"; // Keep your existing CSS import
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/character/:id" element={<CharacterDetails />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <h1>Welcome to Rick and Morty Characters</h1>
+      <RickAndMortyCharacters /> {/* Use the new component here */}
     </div>
   );
 }

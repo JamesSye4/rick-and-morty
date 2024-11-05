@@ -1,17 +1,12 @@
 .character-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centers the content horizontally */
-    justify-content: center;  /* Centers the content vertically */
+    flex: 1 1 200px; /* Grow, shrink, and have a base size of 200px */
+    max-width: 200px; /* Ensure the width doesn’t exceed 200px */
     border: 1px solid #ddd;
-    border-radius: 8px;
     padding: 16px;
-    margin: 10px;
     text-align: center;
-    background-color: white;
-    transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 200px;  /* Adjust the max-width as needed */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
   }
   
   .character-card img {
