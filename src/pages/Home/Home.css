@@ -1,0 +1,7 @@
+.home {
+    max-width: 1200px;  /* Restricts the width of the content */
+    margin: 0 auto;  /* Centers the content horizontally */
+    padding: 20px;
+    text-align: center;  /* Centers text within the home page */
+  }
+  

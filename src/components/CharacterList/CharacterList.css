@@ -1,0 +1,9 @@
+.character-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allows cards to wrap onto the next line */
+    justify-content: center;  /* Centers the cards horizontally */
+    gap: 20px;  /* Space between the cards */
+    padding: 20px;  /* Adds some space around the list */
+    box-sizing: border-box;  /* Ensures padding is included in the element's width */
+  }
+  
